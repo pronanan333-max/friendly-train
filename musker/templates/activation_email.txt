@@ -1,0 +1,7 @@
+Hello {{ user.username }},
+
+Please click the link below to activate your Musker account:
+
+{{ activation_link }}
+
+If you didn't request this, please ignore this email.

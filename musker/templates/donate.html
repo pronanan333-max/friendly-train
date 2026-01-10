@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="card bg-dark text-light mx-auto" style="max-width:400px;">
+    <div class="card-body text-center">
+
+      <h4 class="mb-3">Support Us</h4>
+
+        {% if donate.qr_image %}
+            <img src="{{ donate.qr_image.url }}"
+             class="img-fluid mb-3 rounded shadow"
+             style="max-width:220px;">
+             {% endif %}
+
+      <form method="post" action="{% url 'donate' %}">
+        {% csrf_token %}
+        <input type="number"
+               name="amount"
+               class="form-control mb-3 text-center"
+               placeholder="Amount (THB)"
+               min="10"
+               required>
+
+        <button class="btn btn-success w-100">
+          💚 Donate
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
