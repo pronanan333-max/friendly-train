@@ -183,6 +183,15 @@
 	{% if request.user.id == profile.user.id %}
 		<a href="{% url 'update_user' %}" class="btn btn-outline-secondary">Update Profile</a>
 	{% endif %}
+
+	<br/><br/>
+
+	{% if user.is_authenticated %}    
+          <a href="{% url 'account_logout' %}" class="btn btn-outline-danger">Logout</a>
+    {% endif %}
+
+	<br/><br/>
+
 			</div>
 		</div>
 	</div>
