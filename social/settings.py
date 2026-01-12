@@ -20,11 +20,11 @@ SECRET_KEY = 'django-insecure-0d&@&#$+iplcor#dzu50(oe3d#e$bakyoe@5!ydmteqk%&%w9l
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "friendly-train-production-4a39.up.railway.app",
+    "friendly-train-production.up.railway.app"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://friendly-train-production-4a39.up.railway.app",
+    "https://friendly-train-production.up.railway.app"
 ]
 
 

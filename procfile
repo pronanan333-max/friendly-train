@@ -1,2 +1,3 @@
-web: python manage.py migrate && daphne social.asgi:application --port $PORT --bind 0.0.0.0
+wed: web: gunicorn social.wsgi:application --bind 0.0.0.0:$PORT
+wed: python manage.py migrate && gunicorn social.wsg
 
